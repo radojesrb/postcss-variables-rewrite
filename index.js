@@ -1,12 +1,12 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-variables-rewrite', function (opts) {
+module.exports = postcss.plugin('postcss-import-rewrite', function (opts) {
     opts = opts || {};
 
     return function (css) {
-      css.walkAtRules(function (node) {
-        if (node.name  === 'import' && node.params === '"./variables"') {
-          node.params = '"./variables-' + opts.themeIdentifier + '"';
+      css.walkAtRules((node) => {
+        if (node.name  === 'import' && node.params.includes(opts.originalValue)) {
+          node.params = `"${opts.targetValue}";`;
         }
       });
     };
