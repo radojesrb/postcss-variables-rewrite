@@ -1,0 +1,37 @@
+{
+  "name": "postcss-variables-rewrite",
+  "version": "0.0.0",
+  "description": "PostCSS plugin for rewriting the variables path in @import",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "scss",
+    "webpack",
+    "javascript"
+  ],
+  "author": "Dusan Radojevic <dusan.radojevic@smava.de>",
+  "license": "MIT",
+  "repository": "radojesrb/postcss-variables-rewrite",
+  "bugs": {
+    "url": "https://github.com/radojesrb/postcss-variables-rewrite/issues"
+  },
+  "homepage": "https://github.com/radojesrb/postcss-variables-rewrite",
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}
