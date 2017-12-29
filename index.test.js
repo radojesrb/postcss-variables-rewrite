@@ -12,7 +12,7 @@ function run(input, output, opts) {
 
 it('Transform variable import to load vars of specific theme; blue in this case', () => {
   const inputCSS = '@import "./variables"; a { color: red; border: 1px; }';
-  const outputCSS = '@import "./variables.blue"; a { color: red; border: 1px; }';
+  const outputCSS = '@import "./variables.blue";; a { color: red; border: 1px; }';
   const options = {
     originalValue: './variables',
     targetValue: './variables.blue'
